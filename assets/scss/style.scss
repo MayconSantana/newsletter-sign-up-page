@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
+@import 'variables';
+
+@mixin reset(){
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*{
+    @include reset();
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: $charcoal-grey;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+p{
+    font-size: 16px;
+}
+
+main{
+    width: 100%;
+    height: 95%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .layout{
+        display: flex;
+        background: $white;
+        padding: 15px;
+        border-radius: 25px;
+    }
+
+    .box{
+        display: flex;
+        width: 700px;
+
+        .text{
+            padding: 20px;
+            margin-top: 20px;
+    
+            h1{
+                color: $dark-slate-gray;
+                font-size: 45px;
+                margin-bottom: 20px;
+            }
+    
+            .p-main{
+                margin-bottom: 20px;
+            }
+    
+            .icon{
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+    
+                span{
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-left: 15px;
+                    color: $dark-slate-gray;
+                }
+            }
+    
+            .email{
+                display: flex;
+                flex-direction: column;
+                margin-top: 35px;
+                width: 90%;
+
+                .label{
+                    display: flex;
+                    justify-content: space-between;
+                }
+    
+                label{
+                    font-weight: bold;
+                    font-size: 12px;
+                    color: $dark-slate-gray;
+                    margin-left: 2px;
+                }
+
+                .validEmail{
+                    color: $tomato;
+                }
+
+                .inputError{
+                    background: #ffe8e6;
+                    border: 1px solid $tomato !important;
+                    color: $tomato !important;
+                }
+                
+                input, button{
+                    border-radius: 10px;
+                    padding: 15px;
+                    width: 100%;
+                    outline: none;
+                }
+    
+                input[type="email"]{
+                    margin: 10px 0 20px 0;
+                    border: 1px solid $grey;
+
+                    &:focus{
+                        border: 1px solid $dark-slate-gray;
+                    }
+                }
+    
+                button{
+                    border: none;
+                    background: $dark-slate-gray;
+                    color: $white;
+                    font-weight: bold;
+                    cursor: pointer;
+
+                    &:hover{
+                        background: linear-gradient(to right, $tomato, #ff6834);
+                    }
+                }   
+            }
+        }
+    
+        .img{
+            img{
+                width: 300px;
+            }
+        }
+    }
+    
+    .sucess-box{
+        width: 350px;
+        padding: 20px 30px 30px 30px;
+
+        img{
+            height: 50px;
+        }
+
+        .title{
+            margin: 25px 0;
+            font-size: 40px;
+            font-weight: bold;
+            color: $dark-slate-gray;
+        }
+
+        .text-sucess{
+            font-size: 12px;
+            margin-bottom: 30px;
+
+            span{
+                font-weight: bold;
+            }
+        }
+
+        .btn-sucess{
+            width: 100%;
+            padding: 13px;
+            color: $white;
+            border: none;
+            background: $dark-slate-gray;
+            border-radius: 5px;
+            cursor: pointer;
+            
+            &:hover{
+                background: linear-gradient(to right, $tomato, #ff6834);
+            }
+        }      
+    
+    }
+}
+
+footer{
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+}
+
+.hide{
+    display: none !important;
+}
